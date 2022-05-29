@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Starter Project</title>
+  <base href="/">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js"></script>
+</head>
+<body onload="app.module.listStartUp();">
+  
+    <header>
+      <div>options</div>
+      <div class="page-title">TO DO ism</div>
+      <div>Help</div>
+    </header>
+    <!-- <h3 id="localp"></h3> -->
+    <main >
+      <h2>minimalist todo:</h2>
+      <div class="options-div">
+        <span>You have <span id="unfinished-span"></span> unfinished tasks.</span>
+        <button id="clearLocalStorage-button" onclick="app.module.clearLocalStorage()">Clear All</button>
+      </div>
+      <!-- <ul id="todoList">
+        <li>
+          <span>
+            <span class="title-span ">Title: <input id="title-input" type="text"></span>
+            <span>Text: <input id="text-input" type="text"></span>
+            <span class="title-span ">Amount: <input id="amount-input" type="text"></span>
+          </span>
+          <button class="addBox" onclick="app.module.addTask()"></button>
+        </li>
+   
+      </ul> -->
+    </main>
+    <!-- <h1>Starter Project</h1>
+    <div class="alert">
+      <input id="msg" type="text" value="Hey Wakka">
+      <button onclick="app.module.shout()">Say</button>
+    </div> -->
+    <!-- <div class="select">
+      <select id="select" onchange="app.module.updateSelect()">
+        <option>Dialog</option>
+        <option>UI</option>
+        <option>Alert</option>
+        <option>Console</option>
+      </select>
+    </div> -->
+  <!-- <h1>Starter Project</h1>
+  <div class="alert">
+    <input id="msg" type="text" value="Hey Wakka">
+    <button onclick="app.module.shout()">Say</button>
+  </div>
+  <div class="select">
+    <select id="select" onchange="app.module.updateSelect()">
+      <option>Dialog</option>
+      <option>UI</option>
+      <option>Alert</option>
+      <option>Console</option>
+    </select>
+  </div>
+  <div id="display"></div>
+  <div id="dialog">
+    <div class="card">
+      <div id="message"></div>
+      <button onclick="app.dialog.close()">Ok</button>
+    </div>
+  </div> -->
+</body>
+</html>

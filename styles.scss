@@ -1,0 +1,143 @@
+$font-famaly: Helvetica, sans-serif;
+$primary-color: #333;
+$text-color: white;
+$header-font:Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+$body-background : radial-gradient(rgba(123, 242, 242, 0.701), white);
+body {
+  margin: 0;
+  padding: 0;
+  background-image: $body-background;
+}
+header {
+  display: flex;
+  margin: 0;
+  padding: 5px 70px;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 120px;
+  align-items: center;
+  .page-title {
+    font-size: 60px;
+    font-family: $header-font;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  margin: auto;
+  min-height: 500px;
+  width: 1200px;
+  align-items: center;
+  //background-color: aliceblue;
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.5));
+  .options-div{
+  #clearLocalStorage-button{
+    // background-color: rgba(0, 45, 135, 0.598);
+    color:black;
+    padding: 5px 10px;
+    font-size: 15px;
+    opacity:0.6;
+    border:none;
+    &:hover{
+      opacity:0.8;
+    }
+  }
+}
+  ul {
+    list-style: none;
+    background-color: rgb(138, 138, 138);
+    padding: 10px;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      justify-content: space-between;
+      margin: 2px;
+      width: 800px;
+      padding: 20px;
+      font-size: 20px;
+      background-color: rgb(233, 255, 255);
+      input {
+        width: 100px;
+      }
+
+      &.checkedItem {
+        text-decoration: line-through;
+        background-color: rgb(110, 154, 231);
+      }
+      .leftSpan {
+        //background-color: rgba(89, 152, 155, 0.265);
+        padding: 5px 20px;
+      }
+      color: black;
+      span:first-child {
+        font-size: 25px;
+        font-weight: 900;
+        margin-right: 50px;
+      }
+      // .title-span {
+      //   font-size: 25px;
+      //   font-weight: 900;
+      //   margin-right: 50px;
+      // }
+      .text-span {
+        background-color: rgba(90, 166, 237, 0.107);
+        padding: 10px 100px;
+        box-sizing: border-box;
+        width: 100px;
+      }
+      .amount-span {
+        margin-left: 40px;
+        color: rgb(70, 70, 70);
+      }
+      .delete {
+        background: none;
+        position: absolute;
+        // align-self: right;
+        padding: 0;
+        border: 0;
+        text-decoration: none !important;
+        color: #333;
+        font-weight: bolder;
+        &:active {
+          transform: translate(1px, 2px);
+        }
+      }
+      .deleteTask{
+        background-color: rgba(21, 21, 195, 0.255);
+      }
+    }
+  }
+}
+
+@mixin box {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 0%;
+  margin-right: 10px;
+  align-self: center;
+  box-sizing: border-box;
+}
+.checkbox {
+  @include box;
+
+  background-color: rgb(244, 244, 244);
+  border: 5px solid rgb(0, 0, 0);
+}
+.checkboxChecked {
+  background-color: rgb(255, 255, 255);
+  background-image: url("https://w7.pngwing.com/pngs/405/55/png-transparent-checked-logo-check-mark-green-check-angle-leaf-triangle.png");
+  background-size: cover;
+  border: 5px solid rgb(22, 22, 22);
+}
+.addBox {
+  @include box;
+  background-image: url("https://cdn5.vectorstock.com/i/1000x1000/73/49/plus-sign-symbol-simple-design-vector-25607349.jpg");
+  background-size: cover;
+  background-color: rgb(43, 180, 144);
+  border: 5px solid rgb(24, 24, 24);
+}
