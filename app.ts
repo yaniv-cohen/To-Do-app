@@ -59,8 +59,10 @@ class Module {
       let ul = document.getElementById('todoList');
       if (ul) {
         let div = document.createElement('div');
-        div.className = "checkbox";
-        div.onclick = () => {
+        div.className="right-div";
+        let checkbox= document.createElement('div');
+        checkbox.className = "checkbox";
+        checkbox.onclick = () => {
           //todo: add saved state
           // let str = this.getTextFromLi(li.innerHTML);
           // let rCopy = localStorage.getItem('todos');
@@ -70,14 +72,20 @@ class Module {
           //   }
           
           li.classList.toggle("checkedItem");
-          div.classList.toggle("checkboxChecked");
+          checkbox.classList.toggle("box");
+          checkbox.classList.toggle("checkboxChecked");
+          
+
         };
+        
+        let deleteDiv = document.createElement('div');
+
         if (li.innerHTML != "") {
           console.log('draw ' + li.innerHTML);
-          li.append(div);
-          div.className = "deleteTask";
-          div.innerHTML += "X";
-          div.onclick = () => {
+          //let deleteDiv = document.createElement('div');
+          deleteDiv.className = "deleteTask";
+          deleteDiv.innerHTML += "x";
+          deleteDiv.onclick = () => {
 
             //todo: remove substring from localStorage
             let inn = li.innerHTML;
@@ -89,7 +97,11 @@ class Module {
             }
             li.remove();
           };
+          div.append(deleteDiv);
+          div.append(checkbox);
+
           li.append(div);
+          //li.append(deleteDiv);
           ul.append(li);
         }
       }
