@@ -105,9 +105,13 @@ main {
         &:active {
           transform: translate(1px, 2px);
         }
+        .right-div{
+          display: flex;
+          flex-direction: row;
+        }
       }
       .deleteTask{
-        background-color: rgba(21, 21, 195, 0.255);
+        text-decoration: none !important;
       }
     }
   }
@@ -124,11 +128,12 @@ main {
 }
 .checkbox {
   @include box;
-
   background-color: rgb(244, 244, 244);
   border: 5px solid rgb(0, 0, 0);
 }
 .checkboxChecked {
+  @include box;
+  background-color: rgb(244, 244, 244);
   background-color: rgb(255, 255, 255);
   background-image: url("https://w7.pngwing.com/pngs/405/55/png-transparent-checked-logo-check-mark-green-check-angle-leaf-triangle.png");
   background-size: cover;
